@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import AboutMe from './AboutMe';
+import GetInTouch from './GetInTouch';
+import MinContent from './MinContent';
+import NavBar from './NavBar'
+import Projects from './Projects';
+import Skils from './Skils';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const ref = useRef();
+    useEffect(() => {
+        const el = ref.current;
+        gsap.fromTo(el, { scale: 0 }, {
+            scale: 1, duration: 1, scrollTrigger: {
+                trigger: el
+            }
+        })
+    }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <NavBar />
+    <MinContent />
+    <AboutMe ref={ref}/>
+    <Skils />
+    <Projects />
+    <GetInTouch />
+   </div>
   );
 }
 
