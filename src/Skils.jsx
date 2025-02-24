@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
+import { FaCss3Alt, FaDatabase, FaGitAlt, FaGithub, FaHtml5, FaJs, FaReact,FaJava } from 'react-icons/fa';
 import { RiTailwindCssFill } from "react-icons/ri";
 
 const Skils = () => {
@@ -17,6 +17,10 @@ const Skils = () => {
         <div className='bg-slate-200 h-60 w-52 shadow-lg rounded-lg justify-center items-center flex flex-col gap-2 mt-7 mb-5' >
             <div className=' text-9xl hover:text-yellow-500'><FaJs /></div>
             <div className='font-bold'>JavaScript</div>
+        </div>
+        <div className='bg-slate-200 h-60 w-52 shadow-lg rounded-lg justify-center items-center flex flex-col gap-2 mt-7 mb-5' >
+            <div className=' text-9xl hover:text-red-500'><FaJava /></div>
+            <div className='font-bold'>Java</div>
         </div>
         <div className='bg-slate-200 h-60 w-52 shadow-lg rounded-lg justify-center items-center flex flex-col gap-2 mt-7 mb-5' >
             <div className=' text-9xl hover:text-orange-600'><FaGitAlt /></div>
